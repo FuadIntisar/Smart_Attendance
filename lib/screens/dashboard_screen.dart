@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'attendance_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -26,7 +27,12 @@ class DashboardScreen extends StatelessWidget {
               width: 250,
               child: ElevatedButton(
                 onPressed: () {
-                  debugPrint("Mark Attendance Clicked");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AttendanceScreen(),
+                    ),
+                  );
                 },
                 child: const Text("Mark Attendance"),
               ),
