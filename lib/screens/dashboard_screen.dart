@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'attendance_screen.dart';
+import 'history_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -44,7 +45,12 @@ class DashboardScreen extends StatelessWidget {
               width: 220,
               child: ElevatedButton(
                 onPressed: () {
-                  debugPrint("Attendance History Clicked");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HistoryScreen(),
+                    ),
+                  );
                 },
                 child: const Text("Attendance History"),
               ),
