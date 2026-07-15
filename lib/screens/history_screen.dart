@@ -10,14 +10,29 @@ class HistoryScreen extends StatelessWidget {
         title: const Text("Attendance History"),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          "No Attendance Yet",
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
+      body: ListView(
+        padding: const EdgeInsets.all(18),
+        children: [
+          Card(
+            child: const ListTile(
+              leading: Icon(Icons.person),
+              title: Text("2023831041"),
+              subtitle: Text("swe 250 | section A"),
+              trailing: Icon(Icons.check_circle, color: Colors.green),
+            ),
           ),
-        ),
+
+            const SizedBox(height: 10),
+            
+          Card(
+            child: const ListTile(
+              leading: Icon(Icons.person),
+              title: Text("2023831080"),
+              subtitle: Text("swe 250 | section B"),
+              trailing: Icon(Icons.check_circle, color: Colors.green),
+            ),
+          ),
+        ],
       ),
     );
   }
